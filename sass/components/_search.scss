@@ -1,0 +1,64 @@
+.search {
+    flex: 0 1 40%;
+
+    //Each time we want to center something, or to align something, we can always use Flexbox.
+    //For Flexbox is perfect for all of these small situations where you need to align or center some elements.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // margin -left: -3.5rem;
+
+
+    &__input {
+        font: {
+            family: inherit;
+            size: inherit;
+        }
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px ;
+        width: 90%;
+        transition: all .3s;
+
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        //It can only be used in chrome and firefox;
+        &::-webkit-input-placeholder {
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+
+        //change the color of svg
+        fill: var(--color-grey-dark-3);
+    }
+}
