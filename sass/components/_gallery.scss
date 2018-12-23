@@ -1,0 +1,16 @@
+.gallery {
+    display: flex;
+
+
+    &__item {
+        // It does not need;
+        // width: calc(100% / 3);
+    }
+
+    &__photo {
+        width: 100%;
+        
+        //The image should be displayed as a block. It would have a small space underneath an image, which happens when we leave it as an inline element.
+        display: block;
+    }
+}

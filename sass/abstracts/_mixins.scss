@@ -1,0 +1,28 @@
+@mixin btn-inline-block($font-size, $origin-color, $hover-color) {
+    //because these buttons by default always come with this border;
+    border: none;
+    color: $origin-color;
+    font-size: $font-size;
+
+    // When we use the currentColor, we would not need to change it, when we change the color in hover;
+    border-bottom: 1px solid currentColor;
+
+    padding-bottom: 2px;
+    display: inline-block;
+    // for reuse;
+    background-color: transparent;
+    cursor: pointer;
+
+    
+
+    &:hover {
+        color: $hover-color;
+    }
+
+    &:focus {
+        outline: none;
+
+        //With the keyword infinite, it will work infinitly;
+        animation: pulsate 1s infinite;
+    }
+}

@@ -1,0 +1,67 @@
+.overview {
+    display: flex;
+    border-bottom: 1px solid var(--color-grey-light-2);
+    align-items: center;
+    // height: 7rem;
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        // flex: 1;
+        // Don't like "flex: 1", "margin-right: auto" will only occupy the space it need.
+        margin-right: auto;
+
+        //a small space below each of the stars. Because these SVG elements behave like in-line elements, so it's a bit like text. That produces that small white space that we see here. 
+        //We can remove that by setting the line height and the font size to 0;
+
+        // another simple way to set "display: flex", the space will gone;
+        display: flex;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        background-color: var(--color-primary-light);
+        margin-left: 3rem;
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        align-self: stretch;
+        padding: 0 2.25rem;
+
+        &-average {
+            font-size: 2.25rem;
+            font-weight: 300;
+            margin-bottom: -3px;
+        }
+
+        &-count {
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+    }
+}
