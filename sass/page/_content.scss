@@ -1,3 +1,7 @@
+.content {
+    display: flex;
+}
+
 .sidebar {
     background-color: var(--color-grey-dark-1); 
 
@@ -5,4 +9,16 @@
     //2 - flex-shrink: we set "0" and  don't want it to shirk if there's not enough space ;
     //3 - flex-basis: Since it's a percent value it's actually okay to set flex-shrink "0", because it will automatically shrink because it's a percentage.
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: var(--color-white);
+    flex: 1;
+
+    //Test
+    height: 80rem;
 }
