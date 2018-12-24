@@ -13,10 +13,16 @@
     background-color: transparent;
     cursor: pointer;
 
-    
+    span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
 
     &:hover {
         color: $hover-color;
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {

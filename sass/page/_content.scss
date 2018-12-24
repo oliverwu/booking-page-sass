@@ -19,6 +19,23 @@
     background-color: var(--color-white);
     flex: 1;
 
-    //Test
-    height: 80rem;
+}
+
+.detail {
+    display: flex;
+    border-bottom: $border-line;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    font-size: 1.4rem;
+}
+
+.user-reviews {
+    flex: 1;
+
+    //"text-align: center;" is not usefull here, because it would still center the text in the component of description;
+    // text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }

@@ -1,0 +1,40 @@
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: $border-line;
+    border-bottom: $border-line;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+
+    }
+
+    //In CSS it's really difficult to use a sprite image like we did in the HTML.
+    //In CSS, it's actually much easier to use this single icon itself.
+    &__item::before {
+        content: '';
+        //need to set the "inline-block", width, heigth to display the backbround image;
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+
+        // Fro older browsers, you need to change width, height, and background-size to change the size of svg image;
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: 100%;
+
+        // For New browsers - masks
+        // Mask defines an area where we can look through the element and see what's behind that element. So, basically, what we're gonna do is to set the background-color of this element to a solid color, and then use the icon as the mask. And so we can then look through that mask, basically, and see the background color in the area where the icon is and everything else is covered
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        //we can use cover here so that the icon covers the entire element.
+        -webkit-mask-size: cover;
+
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+    }
+}
