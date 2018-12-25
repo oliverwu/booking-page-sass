@@ -5,4 +5,14 @@
     background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-large){
+        // max-width: 137.5rem;   It is my approach
+        max-width: 100%;
+        width: 100%;
+    }
 }

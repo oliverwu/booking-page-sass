@@ -1,9 +1,12 @@
+@import "abstracts/variable";
+@import "abstracts/mixins";
+
 @import "base/base";
 @import "base/utilities";
 @import "base/animation";
 
-@import "abstracts/mixins";
-@import "abstracts/variable";
+
+
 
 @import "layout/grid";
 @import "layout/header";
@@ -19,6 +22,7 @@
 @import "components/review";
 @import "components/paragraph";
 @import "components/list";
+@import "components/cta";
 
 @import "page/content";
 

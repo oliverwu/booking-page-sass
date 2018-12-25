@@ -32,3 +32,17 @@
         animation: pulsate 1s infinite;
     }
 }
+
+
+@mixin box-position($x-direction, $y-direction) {
+    position: absolute;
+    
+    //Because of this wedge that we cut out right, we can adjust top to 40% to look better;
+    left: $x-direction;
+    top: $y-direction;
+
+    //we can specify how much we want to translate on x and y, And what we want is minus 50% for both.
+
+    //these 50% are now no longer in relation to the parent element, but of the element itself. So it is minus 50%; 
+    transform: translate(-50%, -50%);
+}
