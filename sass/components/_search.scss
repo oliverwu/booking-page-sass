@@ -1,4 +1,6 @@
 .search {
+
+
     flex: 0 1 40%;
 
     //Each time we want to center something, or to align something, we can always use Flexbox.
@@ -9,6 +11,14 @@
 
     // margin -left: -3.5rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        // flex: 1 0 100%;
+        flex: 0 0 100%;
+
+        //Because the minus margin-right is used below, so this element can not be easy to center. we set the whole element with the same background color;
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         font: {

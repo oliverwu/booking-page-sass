@@ -45,6 +45,8 @@ $shadow-light: 0 2rem 5rem rgba(0,0,0, .06);
 
 //ems and rems in media queries, they are not affected by a root font size setting.
 //one rem or one em in a media query is always just equal to the font size which is coming from the browser, and that's by default 16 pixels.
-$bp-largest: 75rem; //1200px
-
+$bp-largest: 75em; //1200px
 $bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px;
+$bp-small: 37.5em; //600px;
+$bp-smallest: 31.5em; //500px;
